@@ -1,0 +1,54 @@
+apiVersion: v1
+entries:
+  nginx-ingress:
+  - apiVersion: v1
+    appVersion: 0.30.0
+    created: "2020-05-07T10:36:58.1421946-04:00"
+    description: An nginx Ingress controller that uses ConfigMap to store the nginx
+      configuration.
+    digest: 3ce840b4fe749d56c1d4b0d0052cd8a4176edf77d4db9828058c4515f87caf9a
+    home: https://github.com/kubernetes/ingress-nginx
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nginx_logo.svg/500px-Nginx_logo.svg.png
+    keywords:
+    - ingress
+    - nginx
+    kubeVersion: '>=1.10.0-0'
+    maintainers:
+    - name: ChiefAlexander
+    - email: Trevor.G.Wood@gmail.com
+      name: taharah
+    name: nginx-ingress
+    sources:
+    - https://github.com/kubernetes/ingress-nginx
+    urls:
+    - https://saisunil2303.github.io/helm-charts/nginx-ingress-1.36.3.tgz
+    version: 1.36.3
+  prometheus:
+  - apiVersion: v1
+    appVersion: 2.16.0
+    created: "2020-05-07T10:36:58.1461805-04:00"
+    dependencies:
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 2.7.*
+    description: Prometheus is a monitoring system and time series database.
+    digest: 0634942e6ec3ccd8d383ce6e5205bef6253b4f8ddbeddcdc1a9162c756046fe4
+    home: https://prometheus.io/
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    name: prometheus
+    sources:
+    - https://github.com/prometheus/alertmanager
+    - https://github.com/prometheus/prometheus
+    - https://github.com/prometheus/pushgateway
+    - https://github.com/prometheus/node_exporter
+    - https://github.com/kubernetes/kube-state-metrics
+    urls:
+    - https://saisunil2303.github.io/helm-charts/prometheus-11.1.5.tgz
+    version: 11.1.5
+generated: "2020-05-07T10:36:58.139224-04:00"
